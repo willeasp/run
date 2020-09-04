@@ -1,5 +1,5 @@
 <HTML>
-  <h1>RUN COMMAND LINE TOOL</h1>
+  <h1>RUN - COMMAND LINE TOOL</h1>
   <p>Do you think that it sucks having to gcc and ./ every time you want to <br>
     run a .c file?</p>
   <p>THEN THIS TOOL IS FOR YOU<br>
