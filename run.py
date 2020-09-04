@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys, getopt, os.path, subprocess
+import sys, getopt, os
 
 def help(full=False):
     if full:
@@ -39,15 +39,17 @@ def compileFile (file):
     fileName, fileType = getFileNameType(file)
     compile_command = "gcc " + file + " -o " + fileName
     print("Compiling: " + compile_command)
-    subprocess.run(compile_command.split())
+    return compile_command
         
 def main(argv):
     file = argv[0]
     fileName, fileType = getFileNameType(file)
-    compileFile(file)
+    compile_command = compileFile(file)
     run_command =  "./" + fileName + addOptions(argv)
     print("Running: " + run_command)
-    subprocess.run(run_command.split())
+    full_command = compile_command + " && " + run_command
+    os.system(full_command)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
