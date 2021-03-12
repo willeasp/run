@@ -7,3 +7,18 @@
     time! You even have the opportunity to add options and redirect input and output!
   </p>
 </HTML>
+
+# INSTALLATION
+```
+cd path/to/where/you/want/to/keep/the/program
+git clone <this repository>
+cd run/
+sudo ./setup.sh
+```
+The setup only puts a symlink from /usr/local/bin/run to where you cloned the repository.
+
+## Uninstall
+```
+rm /usr/local/bin/run
+rm -r /path/to/repo
+```
