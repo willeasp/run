@@ -14,7 +14,7 @@ def getFileNameType(file):
     return fileName, fileType
 
 def addOptions(argv):
-    command = ""
+    command = " "
     try:
         options, arguments = getopt.getopt(argv[1:], "ti:o:", "help")
     except getopt.GetoptError:
